@@ -11,11 +11,11 @@ class Rossmann(object):
                                 # toda vez que a classe rossmann for instanciada, será lido todos os parâmetros necessários 
                                 # self são variáveis (intraclasse) salvas na classe que não podem ser acessadas de fora, apenas via método para c
         self.home_path=''
-        self.competition_distance_scaler=pickle.load   (open(self.home_path +'webapp/parameter/competition_distance_scaler.pkl','rb'))     # rb por ser leitura          
-        self.competition_time_month_scaler=pickle.load(open(self.home_path +'webapp/parameter/competition_time_month_scaler.pkl','rb'))  #arrumar pra absoluto depois
-        self.promo_time_week_scaler=pickle.load       (open(self.home_path +'webapp/parameter/promo_time_week_scaler.pkl','rb'))  
-        self.year_scaler=pickle.load                  (open(self.home_path +'webapp/parameter/year_scaler.pkl','rb'))
-        self.store_type_scaler=pickle.load            (open(self.home_path +'webapp/parameter/store_type_scaler.pkl','rb'))
+        self.competition_distance_scaler=pickle.load   (open(self.home_path +'parameter/competition_distance_scaler.pkl','rb'))     # rb por ser leitura          
+        self.competition_time_month_scaler=pickle.load(open(self.home_path +'parameter/competition_time_month_scaler.pkl','rb'))  #arrumar pra absoluto depois
+        self.promo_time_week_scaler=pickle.load       (open(self.home_path +'parameter/promo_time_week_scaler.pkl','rb'))  
+        self.year_scaler=pickle.load                  (open(self.home_path +'parameter/year_scaler.pkl','rb'))
+        self.store_type_scaler=pickle.load            (open(self.home_path +'parameter/store_type_scaler.pkl','rb'))
 
 
     def data_cleaning(self,df1):  # o self permite usar os valores dentro da casserb 
