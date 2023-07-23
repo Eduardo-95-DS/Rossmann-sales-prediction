@@ -81,7 +81,7 @@ def predict(data):
 	r=requests.post(url,data=data,headers=header)
 	print('Status Code {}'.format(r.status_code))
 
-	d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
+	d1=pd.DataFrame(r.json(),columns=r.json()[0].keys(),encoding='utf-8')  # d1=df com coluna de predição
 
 	return d1
 
