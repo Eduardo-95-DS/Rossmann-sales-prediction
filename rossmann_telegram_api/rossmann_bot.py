@@ -77,12 +77,14 @@ def predict(data):
 	url='https://rossmann-telegram-bot-krvu.onrender.com/rossmann/predict'
 	header={'Content-type':'application/json'}
 	data=data
-
-	r=requests.post(url,data=data,headers=header,encoding='utf-8')
+	
+	try:
+	r=requests.post(url,data=data,headers=header)
 	print('Status Code {}'.format(r.status_code))
 
 	d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
-
+	except json.decoder.JSONDecodeError:
+		print('the string does NOT contain valid JSON')
 	return d1
 
 
