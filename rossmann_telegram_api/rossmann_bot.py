@@ -79,12 +79,13 @@ def predict(data):
 	data=data
 	
 	try:
-	r=requests.post(url,data=data,headers=header)
-	print('Status Code {}'.format(r.status_code))
-
-	d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
+		r=requests.post(url,data=data,headers=header)
+		print('Status Code {}'.format(r.status_code))
+		d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
+	
 	except json.decoder.JSONDecodeError:
 		print('the string does NOT contain valid JSON')
+	
 	return d1
 
 
