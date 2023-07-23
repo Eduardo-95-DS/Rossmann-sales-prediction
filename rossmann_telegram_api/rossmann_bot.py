@@ -74,7 +74,7 @@ def predict(data):
 
 	# API Call
 	# url='https://rossmann-telegram-bot-p524.onrender.com/rossmann/predict'
-	url='https://rossmann-telegram-bot-krvu.onrender.com'
+	url='https://rossmann-telegram-bot-krvu.onrender.com/rossmann/predict'
 	header={'Content-type':'application/json'}
 	data=data
 	
@@ -82,7 +82,7 @@ def predict(data):
 	print('Status Code {}'.format(r.status_code))
 	
 	d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
-	print(d1.head(5))
+	
 	return d1
 
 
