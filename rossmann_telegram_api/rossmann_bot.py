@@ -79,8 +79,8 @@ def predict(data):
 	# API Call
 	#url='https://rossmann-telegram-bot-mdkw.onrender.com/rossmann/predict'
 	url='https://rossmann-telegram-bot-mdkw.onrender.com'
-	header={'Content-type':'application/json'}
-	data=data
+	header='{'Content-type':'application/json'}'
+	data=data	
 	
 	r=requests.post(url,data=data,headers=header)
 	print('Status Code {}'.format(r.status_code))
