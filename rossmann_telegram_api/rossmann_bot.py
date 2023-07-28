@@ -35,7 +35,7 @@ def send_message(chat_id,text):
 	r=requests.post(url,json={'text':text})  # text é o input da função send message
 	print('Status Code {}'.format(r.status_code))
 
-	return None 
+	return https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/sendMessage?chat_id=1455983881&text= send_message completed
 
 
 # o telegram vai mandar mensagem para o endpoint criado c/ flask, e aí no endpoint a mensagem será trabalhada
