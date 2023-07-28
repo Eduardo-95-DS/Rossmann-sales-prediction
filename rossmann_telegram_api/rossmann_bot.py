@@ -86,8 +86,11 @@ def predict(data):
 	
 	print('Status Code {}'.format(r.status_code))
 	
-	teste=r.json()
-	print (teste)
+	try: 
+		teste=r.json()
+		print (teste)
+	except:
+		print("Error from server: " + str(r.content))
 	
 	d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
 	
