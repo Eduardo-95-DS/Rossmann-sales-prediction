@@ -13,6 +13,10 @@ TOKEN='5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM'  # será usado para se co
 # # get updates
 # https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/getUpdates
 
+# Local host run web hook for local tests 
+# ssh -R 80:localhost:5000 localhost.run
+# https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/setWebhook?url=https://36029572b4eb88.lhr.life
+
 # # Webhook
 # https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/setWebhook?url=https://api.render.com/deploy/srv-ci0gf0m4dad5j715fcng?key=ZwB6wr_scsU
 
@@ -74,7 +78,7 @@ def predict(data):
 
 	# API Call
 	# url='https://rossmann-telegram-bot-p524.onrender.com/rossmann/predict'
-	url='https://rossmann-telegram-bot-krvu.onrender.com/rossmann/predict'
+	url='https://rossmann-telegram-bot-mdkw.onrender.com/rossmann/predict'
 	header={'Content-type':'application/json'}
 	data=data
 	
@@ -149,8 +153,7 @@ def index(): # essa função vai rodar toda vez que o endpoint / 'root' for acio
 
 if __name__ == '__main__':
 	#port=os.environ.get('PORT',5000)
-	#app.run(host='0.0.0.0',port=port)
-	app.run(host='0.0.0.0',port=5000)  # método run, rodar o app no host, 5000  porta padrão do flask
+	app.run(host='0.0.0.0',port=5000)  # método run, rodar o app no host, 5000  porta padrão do flask (deploy local)
 
 
 
