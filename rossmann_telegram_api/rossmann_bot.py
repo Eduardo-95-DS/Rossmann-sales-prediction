@@ -35,7 +35,7 @@ def send_message(chat_id,text):
 	r=requests.post(url,json={'text':text})  # text é o input da função send message
 	print('Status Code {}'.format(r.status_code))
 
-	return send_message('def send_message completed')
+	return None
 
 
 # o telegram vai mandar mensagem para o endpoint criado c/ flask, e aí no endpoint a mensagem será trabalhada
@@ -71,7 +71,7 @@ def load_dataset(store_id):
 		data='error'
 
 
-	return data
+	return data, send_message('def load_dataset completed')
 
 
 def predict(data):
