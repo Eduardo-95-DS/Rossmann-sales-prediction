@@ -71,7 +71,7 @@ def load_dataset(store_id):
 		data='error'
 
 
-	return data, send_message('def load_dataset completed')
+	return data, send_message(chat_id,'def load_dataset completed')
 
 
 def predict(data):
