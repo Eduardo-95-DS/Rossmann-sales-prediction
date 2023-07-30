@@ -82,7 +82,7 @@ def predict(data):
 	r=requests.post(url,data=data,headers=header)
 	
 	print('Status Code {}'.format(r.status_code))
-	d1=1
+	d1='a'
 	try:
 		d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
 	
@@ -131,7 +131,6 @@ def index(): # essa função vai rodar toda vez que o endpoint / 'root' for acio
 				d1=predict(data)
 				
 				# calculation
-				print(d1)
 				d2=d1[['store','prediction']].groupby('store').sum().reset_index()
 				
 				# send message
