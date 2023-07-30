@@ -131,6 +131,7 @@ def index(): # essa função vai rodar toda vez que o endpoint / 'root' for acio
 				d1=predict(data)
 				
 				# calculation
+				d1['prediction']=d1['prediction'].astype(float)
 				d2=d1[['store','prediction']].groupby('store').sum().reset_index()
 				
 				# send message
