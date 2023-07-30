@@ -17,11 +17,8 @@ TOKEN='5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM'  # será usado para se co
 # ssh -R 80:localhost:5000 localhost.run
 # https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/setWebhook?url=https://36029572b4eb88.lhr.life
 
-# # Webhook
-# https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/setWebhook?url=https://api.render.com/deploy/srv-ci0gf0m4dad5j715fcng?key=ZwB6wr_scsU
-
 # # Webhook Render
-# https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/setWebhook?url=https://rossmann-pred.onrender.com
+# https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/setWebhook?url=https://rossmann-telegram-bot-mdkw.onrender.com
 
 # # send message #interrogação depois do método é p/ sinalizar ao browser a entrada de parâmetros, & concatena os métodos
 # https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/sendMessage?chat_id=1455983881&text=Hi Eduardo, im good    
@@ -86,13 +83,12 @@ def predict(data):
 	
 	print('Status Code {}'.format(r.status_code))
 	
-	try: 
-		teste=r.json()
-		print (teste)
-	except:
-		print("Error from server: " + str(r.content))
+	try:
+		d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
 	
-	d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
+	except json.decoder.JSONDecodeError:
+    
+    		print('The string does NOT contain valid JSON')
 	
 	return d1
 
