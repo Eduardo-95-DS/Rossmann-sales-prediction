@@ -23,7 +23,7 @@ TOKEN='5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM'  # será usado para se co
 # # send message #interrogação depois do método é p/ sinalizar ao browser a entrada de parâmetros, & concatena os métodos
 # https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/sendMessage?chat_id=1455983881&text=Hi Eduardo, im good    
  
-d1=1
+ 
 def send_message(chat_id,text):
 	url='https://api.telegram.org/bot{}/'.format(TOKEN)
 	url=url+'sendMessage?chat_id={}'.format(chat_id)
@@ -83,12 +83,9 @@ def predict(data):
 	
 	print('Status Code {}'.format(r.status_code))
 	
-	try:
-		d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
 	
-	except json.decoder.JSONDecodeError:
-    
-    		print('The string does NOT contain valid JSON')
+	d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
+
 	
 	return d1
 
