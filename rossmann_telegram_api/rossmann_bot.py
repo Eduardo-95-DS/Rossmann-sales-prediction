@@ -74,7 +74,7 @@ def load_dataset(store_id):
 def predict(data):
 
 	# API Call
-	url='http://shy-shayne-soturno.koyeb.app/rossmann/predict'
+	url='https://shy-shayne-soturno.koyeb.app/rossmann/predict'
 	#url='https://rossmann-telegram-bot-mdkw.onrender.com/rossmann/predict'
 	#url='https://rossmann-telegram-bot-mdkw.onrender.com'
 	header={"Content-type":"application/json"}
@@ -153,7 +153,7 @@ def index(): # essa função vai rodar toda vez que o endpoint / 'root' for acio
 
 
 if __name__ == '__main__':
-	port=os.environ.get('PORT',8000) # (deploy render)
+	port=os.environ.get('PORT',5000) # (deploy render)
 	app.run(host='0.0.0.0',port=port)
 	
 	#app.run(host='0.0.0.0',port=5000)  # método run, rodar o app no host, 5000  porta padrão do flask (deploy local)
