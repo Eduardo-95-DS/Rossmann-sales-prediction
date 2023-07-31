@@ -74,8 +74,8 @@ def load_dataset(store_id):
 def predict(data):
 
 	# API Call
-	#url='https://rossmann-telegram-bot-mdkw.onrender.com/rossmann/predict'
-	url='https://rossmann-telegram-bot-mdkw.onrender.com'
+	url='https://rossmann-telegram-bot-mdkw.onrender.com/rossmann/predict'
+	#url='https://rossmann-telegram-bot-mdkw.onrender.com'
 	header={"Content-type":"application/json"}
 	data=data	
 	
