@@ -75,7 +75,7 @@ def predict(data):
 
 	# API Call
 	#url='https://shy-shayne-soturno.koyeb.app'
-	url='https://rossmann-telegram-bot-ma4l.onrender.com/rossmann/predict'
+	url='https://rossmann-webapp-86pb.onrender.com/rossmann/predict'
 	#url='https://rossmann-telegram-bot-ma4l.onrender.com/'
 	header={'Content-type':'application/json'}
 	data=data	
