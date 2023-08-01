@@ -78,7 +78,7 @@ def predict(data):
 	url='https://rossmann-telegram-bot-ma4l.onrender.com/rossmann/predict'
 	header={"Content-type":"application/json"}
 	data=data	
-	
+	global d1
 	r=requests.post(url,data=data,headers=header)
 	
 	print('Status Code {}'.format(r.status_code))
