@@ -75,16 +75,16 @@ def predict(data):
 
 	# API Call
 	#url='https://shy-shayne-soturno.koyeb.app'
-	#url='https://rossmann-telegram-bot-ma4l.onrender.com/rossmann/predict'
-	url='https://rossmann-telegram-bot-ma4l.onrender.com/'
-	header={"Content-type":"application/json"}
+	url='https://rossmann-telegram-bot-ma4l.onrender.com/rossmann/predict'
+	#url='https://rossmann-telegram-bot-ma4l.onrender.com/'
+	header={'Content-type':'application/json'}
 	data=data	
 	
 	r=requests.post(url,data=data,headers=header)
 	
 	print('Status Code {}'.format(r.status_code))
 
-	d1=pd.DataFrame(r.json()[0],columns=r.json()[0].keys())  # d1=df com coluna de predição
+	d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
 
 	return d1
 
@@ -110,7 +110,7 @@ def parse_message(message):
 app=Flask(__name__)   # instanciar o flask  
  
 #  criar a rota/endpoint, pra onde a mensagem vai chegar
-@app.route('/',methods=['GET','POST'])	# @app.route é um decorador, / = endpoint na raiz, get e post métodos permitidos nesse endpoint
+@app.route('/rossmann/predict',methods=['GET','POST'])	# @app.route é um decorador, / = endpoint na raiz, get e post métodos permitidos nesse endpoint
 def index(): # essa função vai rodar toda vez que o endpoint / 'root' for acionado passando um dado
 	if request.method =='POST':   # se sim recebeu uma mensagem
 		message=request.get_json()
