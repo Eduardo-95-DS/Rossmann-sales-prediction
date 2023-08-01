@@ -79,20 +79,13 @@ def predict(data):
 	url='https://rossmann-telegram-bot-ma4l.onrender.com/'
 	header={"Content-type":"application/json"}
 	data=data	
-	global d1
+	
 	r=requests.post(url,data=data,headers=header)
 	
 	print('Status Code {}'.format(r.status_code))
-	
-	try:
-		if r.json() !={}:
-			d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
 
-		else:
-			None
-	except ValueError:
-		print('shit')
-	
+	d1=pd.DataFrame(r.json(),columns=r.json()[0].keys())  # d1=df com coluna de predição
+
 	return d1
 
 
