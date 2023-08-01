@@ -18,7 +18,7 @@ TOKEN='5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM'  # será usado para se co
 # https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/setWebhook?url=https://36029572b4eb88.lhr.life
 
 # # Webhook Render
-# https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/setWebhook?url=https://rossmann-telegram-bot-mdkw.onrender.com
+# https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/setWebhook?url=https://rossmann-telegram-bot-ma4l.onrender.com
 
 # # send message #interrogação depois do método é p/ sinalizar ao browser a entrada de parâmetros, & concatena os métodos
 # https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/sendMessage?chat_id=1455983881&text=Hi Eduardo, im good    
@@ -74,9 +74,8 @@ def load_dataset(store_id):
 def predict(data):
 
 	# API Call
-	url='https://shy-shayne-soturno.koyeb.app'
-	#url='https://rossmann-telegram-bot-mdkw.onrender.com/rossmann/predict'
-	#url='https://rossmann-telegram-bot-mdkw.onrender.com'
+	#url='https://shy-shayne-soturno.koyeb.app'
+	url='https://rossmann-telegram-bot-ma4l.onrender.com/rossmann/predict'
 	header={"Content-type":"application/json"}
 	data=data	
 	
