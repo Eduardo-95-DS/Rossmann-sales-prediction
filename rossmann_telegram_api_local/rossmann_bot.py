@@ -150,12 +150,3 @@ def index(): # essa função vai rodar toda vez que o endpoint / 'root' for acio
 if __name__ == '__main__':	
 	app.run(host='0.0.0.0',port=5000)  # método run, rodar o app no host, 5000  porta padrão do flask (deploy local)
 
-
-
-
-#d2=d1[['store','prediction']].groupby('store').sum().reset_index()
-
-#for i in range (len(d2)):
-#    print('Store number {} will sell R${:,.2f} in the next 6 weeks'.format(
-#            d2.loc[i,'store'],
-#            d2.loc[i,'prediction']))

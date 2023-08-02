@@ -18,7 +18,7 @@ TOKEN='5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM'  # será usado para se co
 # https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/setWebhook?url=https://36029572b4eb88.lhr.life
 
 # # Webhook Render
-# https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/setWebhook?url=https://rossmann-telegram-bot-ma4l.onrender.com
+# https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/setWebhook?url=https://rossmann-telegram-bot-xtzy.onrender.com
 
 # # send message #interrogação depois do método é p/ sinalizar ao browser a entrada de parâmetros, & concatena os métodos
 # https://api.telegram.org/bot5457388815:AAEwlvy4YvcnFMq0q0AfaRiDdgVbLbbGbqM/sendMessage?chat_id=1455983881&text=Hi Eduardo, im good    
@@ -74,9 +74,7 @@ def load_dataset(store_id):
 def predict(data):
 
 	# API Call
-	#url='https://shy-shayne-soturno.koyeb.app'
 	url='https://rossmann-webapp-86pb.onrender.com/rossmann/predict'
-	#url='https://rossmann-telegram-bot-ma4l.onrender.com/'
 	header={'Content-type':'application/json'}
 	data=data	
 	
@@ -151,17 +149,6 @@ def index(): # essa função vai rodar toda vez que o endpoint / 'root' for acio
 
 
 if __name__ == '__main__':
-	port=os.environ.get('PORT',5000) # (deploy render)
+	port=os.environ.get('PORT',5000) 
 	app.run(host='0.0.0.0',port=port)
-	
-	#app.run(host='0.0.0.0',port=5000)  # método run, rodar o app no host, 5000  porta padrão do flask (deploy local)
 
-
-
-
-#d2=d1[['store','prediction']].groupby('store').sum().reset_index()
-
-#for i in range (len(d2)):
-#    print('Store number {} will sell R${:,.2f} in the next 6 weeks'.format(
-#            d2.loc[i,'store'],
-#            d2.loc[i,'prediction']))
