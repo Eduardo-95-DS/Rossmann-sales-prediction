@@ -4,7 +4,7 @@
 ![220px-Roßmann-Markt_in_Berlin](https://user-images.githubusercontent.com/95311171/221661647-73c0decf-d876-4cd9-9ed6-f7064317aa8d.jpg)
 
 # **1. Business problem**
- Rossmann is a european drug store, which have over 3,000 unities in 7 european countries.
+Rossmann is a european drug store, which have over 3,000 unities in 7 european countries.    
 Normally thousands of store managers predict their daily sales up to for six weeks in advance based on their own empirical experience, but important factors like seasonality, locality and holidays across Europe leads to a unreliable precision.   
 
 Therefore the goal is to improve the prediction using a machine learning algorithm while also making possible for the CFO to consult the six weeks prediction via a Telegram bot.        
