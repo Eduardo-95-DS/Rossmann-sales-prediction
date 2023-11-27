@@ -1,7 +1,8 @@
 # **Rossmann store**
 ## **Sales prediction**
 
-![220px-Roßmann-Markt_in_Berlin](https://user-images.githubusercontent.com/95311171/221661647-73c0decf-d876-4cd9-9ed6-f7064317aa8d.jpg)
+![rossmann2](https://github.com/Eduardo-95-DS/Rossmann-sales-prediction/assets/95311171/7be4ae43-908f-4502-b6b7-196002ccaee2)
+
 
 # **1. Business problem**
 Rossmann is a european drug store, which have over 3,000 unities in 7 european countries.    
