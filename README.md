@@ -45,20 +45,21 @@ The assumptions about the business problem are as follows:
 **Hypothesis 01:** Stores with greater assortments should sell more.   
 **True.** As observed, the extra assortment sells more, followed by extended and basic, in that order.       
 
-![Screenshot from 2023-06-19 21-32-36](https://github.com/Soturno95/Rossmann-sales-prediction/assets/95311171/533284b2-9781-4160-afd8-3010c5366834)
-
+<!---![Screenshot from 2023-06-19 21-32-36](https://github.com/Soturno95/Rossmann-sales-prediction/assets/95311171/533284b2-9781-4160-afd8-3010c5366834)-->
+![1](https://github.com/Eduardo-95-DS/Rossmann-sales-prediction/assets/95311171/aba06611-730d-4d61-acd5-b72b97e99104)
+![2](https://github.com/Eduardo-95-DS/Rossmann-sales-prediction/assets/95311171/d3ed406b-afc8-444f-a9f5-b563b5942db5)
 
 
 **Hypothesis 02:** Stores with closer competitors should sell less.      
 **False.** As observed, the distance between stores doesn't affect the sales.
-![download (1)](https://github.com/Soturno95/Rossmann-sales-prediction/assets/95311171/5045a85f-e0c2-4b37-b05a-b8097eb5c339)
+![3](https://github.com/Eduardo-95-DS/Rossmann-sales-prediction/assets/95311171/7846f196-6527-47ce-9516-f568fb0f736e)
 
 
 
 **Hypothesis 06:** Stores with consecutive promotions should sell more.         
 **True.** As observed, consecutive promotions increase sales.    
+![4](https://github.com/Eduardo-95-DS/Rossmann-sales-prediction/assets/95311171/06b1a64c-cb65-4280-b4f2-29c8c1aae7a5)
 
-![download (2)](https://github.com/Soturno95/Rossmann-sales-prediction/assets/95311171/6250b6d8-d612-42f4-9da3-ebe3d7fb5c20)
 
 
 # **5. Machine learning model applied**   
