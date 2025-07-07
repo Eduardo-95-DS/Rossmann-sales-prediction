@@ -1,3 +1,5 @@
+# python = 3.8
+
 aiofiles==0.8.0
 aiosqlite==0.17.0
 anyio==3.6.1
